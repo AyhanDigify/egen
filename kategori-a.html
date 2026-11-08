@@ -318,6 +318,14 @@ body.drw-on .drw{transform:none}.drw-bg{position:fixed;inset:0;background:rgba(1
  .dchips{flex-wrap:nowrap;overflow-x:auto;padding:18px 16px 4px;margin:0 -16px;width:auto}.dchips a{white-space:nowrap}
  .kgrid{grid-template-columns:repeat(2,1fr)}.rls{grid-template-columns:1fr}
  .dt{min-width:0}.dt thead{display:none}.dt tr{display:block;border-top:1px solid var(--line);padding:8px 0}.dt td{display:block;border:0;padding:4px 14px}.dt td:before{content:attr(data-l);display:block;font-size:12px;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.04em}.dt td:first-child:before{display:none}.dt tr:nth-child(even) td{background:none}}
+
+.lib{padding:44px 0 10px}.lib-h{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:18px}.lib-h h2{font-size:clamp(24px,2.6vw,34px)}.lib-n{color:var(--mut);font-size:14px}.lib-n b{color:var(--p);font-size:20px}
+.lib-f{display:grid;grid-template-columns:1.6fr 1fr 1fr .7fr;gap:10px;margin-bottom:14px}.lib-f select,.lib-s{border:1px solid var(--line);border-radius:12px;background:var(--card);font:inherit;font-size:15px;padding:0 14px;height:50px;color:var(--head)}
+.lib-s{display:flex;align-items:center;gap:10px;color:var(--mut)}.lib-s input{border:0;outline:0;font:inherit;flex:1;background:none;color:var(--head)}.lib-s:focus-within{border-color:var(--p)}
+.lib-t td small{display:block;color:var(--mut);font-size:12.5px}.lib-t .acts{white-space:nowrap}.lib-t .acts .btn{margin:2px 4px 2px 0;padding:7px 12px;font-size:13px}.lnk{font-size:13px;font-weight:700;color:var(--p);margin-left:4px}
+.lib .tw{max-height:640px;overflow:auto}.lib-t thead th{position:sticky;top:0;z-index:1}.lib-not{font-size:13.5px;color:var(--mut);margin-top:10px}
+@media (max-width:900px){.lib-f{grid-template-columns:1fr 1fr}.lib-s{grid-column:1/-1}.lib .tw{max-height:none}}
+@media (max-width:640px){.lib-t .acts{white-space:normal}}
 </style></head><body class="pg-kategori">
 
 <div class="topbar"><div class="wrap tb-in">
@@ -424,4 +432,8 @@ f.addEventListener('change',run);const s=document.getElementById('srt'),G=docume
 const q=document.querySelector('.qbar'),qn=document.getElementById('qn');let n=0;document.querySelectorAll('.add').forEach(b=>b.onclick=e=>{e.preventDefault();b.classList.toggle('on');n+=b.classList.contains('on')?1:-1;qn.textContent=n;q.classList.toggle('on',n>0)})})();
 (()=>{const a=document.querySelector('.art');if(!a)return;const p=document.querySelector('.prog'),ls=[...document.querySelectorAll('.toc a')],hs=ls.map(l=>document.querySelector(l.getAttribute('href')));
 addEventListener('scroll',()=>{const r=a.getBoundingClientRect();p.style.width=Math.min(100,Math.max(0,-r.top/(r.height-innerHeight)*100))+'%';let k=0;hs.forEach((h,i)=>{if(h&&h.getBoundingClientRect().top<140)k=i});ls.forEach((l,i)=>l.classList.toggle('on',i===k))},{passive:true})})();
+
+(()=>{const q=document.getElementById('libq');if(!q)return;const rs=[...document.querySelectorAll('.lib-t tbody tr')],t=document.getElementById('libtur'),g=document.getElementById('libgrp'),d=document.getElementById('libdil'),n=document.getElementById('libn');
+const f=()=>{const v=q.value.toLowerCase().trim();let k=0;rs.forEach(r=>{const ok=(!v||r.dataset.q.includes(v))&&(!t.value||r.dataset.tur===t.value)&&(!g.value||r.dataset.grp===g.value)&&(!d.value||r.dataset.dil===d.value);r.style.display=ok?'':'none';if(ok)k++});n.textContent=k};
+[q,t,g,d].forEach(e=>e.addEventListener('input',f))})();
 </script></body></html>
