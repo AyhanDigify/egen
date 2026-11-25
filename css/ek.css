@@ -1,0 +1,17 @@
+/* EGEN — 26 Kas 2026 ekleri: sağ alt iletişim düğmesi, üretim görseli oranı */
+.cdial{position:fixed;right:22px;bottom:22px;z-index:45;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.cdial-btn{width:58px;height:58px;border-radius:50%;border:0;background:#25D366;color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .2s,background .2s}
+.cdial-btn:hover{transform:scale(1.05)}.cdial-btn .cd-x{display:none}
+.cdial.open .cdial-btn{background:#2b1f6b;box-shadow:0 12px 30px -8px rgba(43,31,107,.5)}.cdial.open .cdial-btn>.ic:first-child{display:none}.cdial.open .cdial-btn .cd-x{display:block}
+.cdial-list[hidden]{display:none}
+.cdial-list{display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.cdial-list a{display:flex;align-items:center;gap:10px;padding:9px 16px 9px 10px;border-radius:40px;background:#fff;color:#1d1b33;font-weight:700;font-size:14.5px;box-shadow:0 10px 26px -10px rgba(20,10,60,.35);border:1px solid #ece9f5;animation:cdIn .18s ease both}
+.cdial-list a .ic{width:34px;height:34px;padding:7px;border-radius:50%;color:#fff;flex:none}
+.cd-wa .ic{background:#25D366}.cd-tel .ic{background:#3b2a9b}.cd-mail .ic{background:#e2a400}.cd-map .ic{background:#d9442b}
+.cdial-list a:hover{border-color:#3b2a9b}
+.cdial-list a:nth-child(2){animation-delay:.03s}.cdial-list a:nth-child(3){animation-delay:.06s}.cdial-list a:nth-child(4){animation-delay:.09s}
+@keyframes cdIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.cdial{bottom:calc(74px + env(safe-area-inset-bottom));right:14px}.cdial-btn{width:52px;height:52px}}
+@media print{.cdial{display:none}}
+.ur-media img[src$="uretim-114.webp"]{aspect-ratio:4/5;object-fit:cover}
+form[hidden],.form-ok[hidden]{display:none!important}
