@@ -34,7 +34,7 @@
         <label class="full">Eklemek istedikleriniz <small>(isteğe bağlı)</small><textarea name="not" maxlength="2000" rows="3"></textarea></label>
       </div>
       <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="consent"><input type="checkbox" name="kvkk" value="evet" required><span>Bilgilerimin bu talebin yanıtlanması amacıyla Egen Barkod tarafından işlenmesini kabul ediyorum. <span class="req">*</span></span></label>
+      <label class="consent"><input type="checkbox" name="kvkk" value="evet" required><span>Bilgilerimin bu talebin yanıtlanması amacıyla Egen Barkod tarafından işlenmesini kabul ediyorum (<a href="kvkk-aydinlatma-metni.html" target="_blank" rel="noopener">KVKK Aydınlatma Metni</a>). <span class="req">*</span></span></label>
       <div class="actions"><button type="submit" class="button primary">Teklif Talebini Gönder</button></div>
       <p class="tf-durum" role="status"></p>`;
     kok.appendChild(f);

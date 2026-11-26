@@ -15,3 +15,24 @@
 @media print{.cdial{display:none}}
 .ur-media img[src$="uretim-114.webp"]{aspect-ratio:4/5;object-fit:cover}
 form[hidden],.form-ok[hidden]{display:none!important}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* hero görseli kendi oranında (yatay katalog görselleri kırpılmasın) */
+.dhero .dhero-img{aspect-ratio:auto!important;max-height:none!important;height:auto}
+.dhero .dhero-img img{height:auto!important;display:block}
+/* Gizlilik Tercihi Merkezi */
+.cz[hidden]{display:none}
+.cz{position:fixed;left:16px;right:16px;bottom:16px;z-index:80;display:flex;justify-content:center;pointer-events:none}
+.cz-kutu{pointer-events:auto;width:100%;max-width:980px;background:#fff;color:#1d1b33;border:1px solid #e4e1f0;border-radius:18px;box-shadow:0 24px 60px -18px rgba(20,10,60,.45);padding:20px 22px;max-height:calc(100vh - 32px);overflow:auto}
+.cz-ust h2{font-size:18px;margin:0 0 6px;color:#2b1f6b}.cz-giris{font-size:14px;line-height:1.55;color:#4a4760;margin:0 0 14px}
+.cz-btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.cz-l{font-weight:700;font-size:14px;color:#3b2a9b;margin-right:auto;text-decoration:underline;text-underline-offset:3px}
+.cz-b{font:inherit;font-weight:700;font-size:14px;padding:10px 16px;border-radius:10px;border:1px solid #d8d3ea;background:#fff;color:#2b1f6b;cursor:pointer}
+.cz-b:hover{border-color:#3b2a9b}.cz-ok,.cz-kaydet{background:#ffd400;border-color:#ffd400;color:#1d1b33}
+.cz-b:focus-visible,.cz-l:focus-visible,.cz-sw input:focus-visible+span{outline:3px solid #7450c8;outline-offset:2px}
+.cz-panel{border-top:1px solid #eee;margin:4px 0 14px;padding-top:6px}.cz-kat{padding:12px 0;border-bottom:1px solid #f0eef6}
+.cz-kb{display:flex;justify-content:space-between;align-items:center;gap:12px}.cz-kb b{font-size:15px}.cz-kat p{font-size:13.5px;color:#55526a;margin:6px 0 0;line-height:1.5}
+.cz-her{font-size:12.5px;font-weight:700;color:#17703a}
+.cz-sw{position:relative;display:inline-block;width:46px;height:26px;flex:none}.cz-sw input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.cz-sw span{position:absolute;inset:0;background:#cfcbe0;border-radius:26px;transition:.2s;pointer-events:none}.cz-sw span:before{content:"";position:absolute;left:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.cz-sw input:checked+span{background:#3b2a9b}.cz-sw input:checked+span:before{transform:translateX(20px)}
+@media (max-width:700px){.cz{left:8px;right:8px;bottom:8px}.cz-kutu{padding:16px}.cz-btns .cz-b{flex:1 1 100%}.cz-l{flex-basis:100%;margin:0 0 4px}}
+@media print{.cz{display:none}}
