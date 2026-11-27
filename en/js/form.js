@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const r = await window.egenGonder(new FormData(form), form.dataset.egenForm);
         const ok = document.createElement('div');
         ok.className = 'form-ok'; ok.setAttribute('role', 'status'); ok.tabIndex = -1;
-        ok.innerHTML = '<b>Teşekkürler, talebiniz alındı.</b><span>Talep numaranız: <strong></strong></span><span>Ekibimiz en kısa sürede sizinle iletişime geçecek.</span><button type="button" class="btn btn-line btn-sm">Yeni mesaj gönder</button>';
+        ok.innerHTML = '<b>Thank you, your request has been received.</b><span>Your request number: <strong></strong></span><span>Our team will contact you as soon as possible.</span><button type="button" class="btn btn-line btn-sm">Send a new message</button>';
         ok.querySelector('strong').textContent = r.no;
         ok.querySelector('button').onclick = () => { ok.remove(); form.reset(); form.hidden = false; };
         form.hidden = true; form.after(ok); ok.focus();

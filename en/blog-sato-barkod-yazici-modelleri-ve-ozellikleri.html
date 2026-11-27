@@ -700,4 +700,4 @@ addEventListener('scroll',()=>{const r=a.getBoundingClientRect();p.style.width=M
 (()=>{const q=document.getElementById('libq');if(!q)return;const rs=[...document.querySelectorAll('.lib-t tbody tr')],t=document.getElementById('libtur'),g=document.getElementById('libgrp'),d=document.getElementById('libdil'),n=document.getElementById('libn');
 const f=()=>{const v=q.value.toLowerCase().trim();let k=0;rs.forEach(r=>{const ok=(!v||r.dataset.q.includes(v))&&(!t.value||r.dataset.tur===t.value)&&(!g.value||r.dataset.grp===g.value)&&(!d.value||r.dataset.dil===d.value);r.style.display=ok?'':'none';if(ok)k++});n.textContent=k};
 [q,t,g,d].forEach(e=>e.addEventListener('input',f))})();
-</script><script defer="" src="../ara.js"></script></body></html>
+</script><script defer="" src="ara.js"></script></body></html>
