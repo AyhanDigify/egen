@@ -42,7 +42,11 @@ form[hidden],.form-ok[hidden]{display:none!important}
 .kv3-main{min-width:0}
 .kv3-main .wrap{max-width:none;padding-left:0;padding-right:0;margin-left:0;margin-right:0}
 .kv3-main>section:first-child{padding-top:0;margin-top:0}
-.kv3-main .ktile{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.kv3-main .ktile{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.kv3-main .ktile a{flex-direction:column;align-items:stretch;gap:0;padding:0;overflow:hidden}
+.kv3-main .ktile img{width:100%;height:auto;aspect-ratio:16/10;border-radius:0;object-fit:cover;background:#fff;border-bottom:1px solid var(--line,#eee)}
+.kv3-main .ktile a>span{padding:12px 14px 14px;font-size:15px}
+@media (max-width:640px){.kv3-main .ktile{grid-template-columns:1fr 1fr;gap:10px}.kv3-main .ktile a>span{padding:10px;font-size:13.5px}}
 .kv3-side{position:sticky;top:96px;align-self:start}
 .kv3-d{background:var(--card,#fff);border:1px solid var(--line,#e6e4f0);border-radius:16px;padding:16px 14px}
 .kv3-d summary{list-style:none;cursor:default;font:700 12px/1 var(--fh,inherit);letter-spacing:.12em;text-transform:uppercase;color:var(--p,#3F2A87);padding:4px 8px 12px}
