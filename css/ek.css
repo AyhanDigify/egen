@@ -47,6 +47,7 @@ form[hidden],.form-ok[hidden]{display:none!important}
 .kv3-main .ktile img{width:100%;height:auto;aspect-ratio:16/10;border-radius:0;object-fit:cover;background:#fff;border-bottom:1px solid var(--line,#eee)}
 .kv3-main .ktile a>span{padding:12px 14px 14px;font-size:15px}
 @media (max-width:640px){.kv3-main .ktile{grid-template-columns:1fr 1fr;gap:10px}.kv3-main .ktile a>span{padding:10px;font-size:13.5px}}
+.dhero .dh-alt{font:700 17px/1.4 var(--fh,inherit);color:var(--p,#3F2A87);margin:-4px 0 14px}
 .bl-kat a{color:var(--p,#3F2A87);font-weight:700}.bl-kat a:hover{text-decoration:underline}
 .kv3-side{position:sticky;top:96px;align-self:start}
 .kv3-d{background:var(--card,#fff);border:1px solid var(--line,#e6e4f0);border-radius:16px;padding:16px 14px}
